@@ -1,30 +1,44 @@
 <?php
-//require_once "connection.php";
+require_once "connection.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate name
-    $firstname = trim($_POST["name"]);
+    date_default_timezone_set('Africa/Nairobi');
+    $firstname = trim($_POST["firstname"]);
     $lastname = trim($_POST["lastname"]);
     $email = trim($_POST["email"]);
+    $phone = trim($_POST["PhoneNo"]);
+    $natID = trim($_POST["NatID"]);
     $password = trim($_POST["password"]);
+    $stripped = substr($phone, -9);
+    $finalStripped = "254".$stripped;
 
-    /*$sql = "INSERT INTO students (first_name, last_name, admission, gender) VALUES (?, ?, ?, ?)";
+    $ourArray = [
+        'name'=>$firstname,
+        'lname'=>$lastname
+    ];
+    echo json_encode($ourArray);
+//echo($ourArray);
+    /*$sql = "INSERT INTO customers (firstname, lastname, email, PhoneNo, regDate, password, NatID) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $mysqli->prepare($sql);
         // Bind variables to the prepared statement as parameters
-        $stmt->bind_param("ssss", $param1, $param2, $param3, $param4);
+        $stmt->bind_param("sssssss", $param1, $param2, $param3, $param4, $param5, $param6, $param7);
         
         // Set parameters
         $param1 = $firstname;
         $param2 = $lastname;
-        $param3 = $adm;
-        $param4 = $gen;
+        $param3 = $email;
+        $param4 = $finalStripped;
+        $param5 = date("Y-m-d H:i:s");
+        $param6 = $password;
+        $param7 = $natID;
         
-        // Attempt to execute the prepared statement
-        $stmt->execute();*/
-        print($firstname." ".$lastname." ".$email." ".$password);
+        // Attempt to execute the prepared statementphone
+        $stmt->execute();
+        echo("Registration successfull");
      
     // Close statement
-    //$stmt->close();
+    $stmt->close();*/
 }
 //$mysqli->close();
 ?>

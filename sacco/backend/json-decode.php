@@ -69,3 +69,7 @@ print($arr["Body"]["stkCallback"]["CallbackMetadata"]["Item"][4]["Value"])."<br>
 //echo $arr["book"]["author"] . "<br>";  // Output: J. K. Rowling
 //echo $arr["book"]["characters"][0] . "<br>";  // Output: Harry Potter
 //echo $arr["book"]["price"]["hardcover"];
+//date_default_timezone_set('Africa/Nairobi');
+print($arr["Body"]["stkCallback"]["ResultCode"])."<br>";
+$today = date("Y");
+echo($today);
