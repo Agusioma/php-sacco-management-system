@@ -1,5 +1,5 @@
 <?php
-  require_once "connection.php";
+  //require_once "connection.php";
   date_default_timezone_set('Africa/Nairobi');
 
   if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -84,7 +84,5 @@
               curl_setopt($curl, CURLOPT_POST, true);
               curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
               $curl_response = curl_exec($curl);
-
-              echo "Check your phone";
 }
 ?>
