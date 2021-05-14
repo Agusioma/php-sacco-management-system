@@ -13,13 +13,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $stripped = substr($phone, -9);
     $finalStripped = "254".$stripped;
 
-    $ourArray = [
+    /*$ourArray = [
         'name'=>$firstname,
         'lname'=>$lastname
     ];
-    echo json_encode($ourArray);
-//echo($ourArray);
-    /*$sql = "INSERT INTO customers (firstname, lastname, email, PhoneNo, regDate, password, NatID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    echo json_encode($ourArray);*/
+
+    $sql = "INSERT INTO customers (firstname, lastname, email, PhoneNo, regDate, password, NatID) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $mysqli->prepare($sql);
         // Bind variables to the prepared statement as parameters
         $stmt->bind_param("sssssss", $param1, $param2, $param3, $param4, $param5, $param6, $param7);
@@ -34,11 +34,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $param7 = $natID;
         
         // Attempt to execute the prepared statementphone
-        $stmt->execute();
-        echo("Registration successfull");
+        if($stmt->execute()){
+        echo("Registration successful");
+        }else{
+            echo("An unexpected error occurred");
+        }
      
     // Close statement
-    $stmt->close();*/
+    $stmt->close();
 }
-//$mysqli->close();
+$mysqli->close();
 ?>

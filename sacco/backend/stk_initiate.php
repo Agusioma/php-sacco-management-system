@@ -76,7 +76,7 @@
                 'PhoneNumber' => $PartyA,
                 'CallBackURL' => $CallBackURL,
                 'AccountReference' => $AccountReference,
-                'TransactionDesc' => $TransactionDesc
+                'TransactionDesc' => $TransaYourctionDesc
               );
 
               $data_string = json_encode($curl_post_data);
