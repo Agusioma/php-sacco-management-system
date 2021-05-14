@@ -6,13 +6,13 @@
   <div class="card-body" style=" max-width: 70vw; ">
 
 			<div class="mb-3">
-		  <label  class="form-label text-primary">First name</label>
+		  <label  class="form-label text-primary">First Name</label>
 				<div class="d-flex align-items-center justify-content-center vw-50">
 			      <input class="form-control text-center" id="editName01">
 				  </div>
 		</div>
 		<div class="mb-3">
-		  <label class="form-label text-primary">Second name</label>
+		  <label class="form-label text-primary">Second Name</label>
 				<div class="d-flex align-items-center justify-content-center vw-50">
 			      <input class="form-control text-center" id="editLname01">
 				  </div>
@@ -23,21 +23,38 @@
 			      <input type='email' class="form-control text-center" id="editEmail01">
 				  </div>
 		</div>
-		  <button id="editBtn" class="btn" style="background-color: #008081; color: white">Save Changes</button>
+		  <button id="editBtn" class="btn" style="background-color: #008081; color: white">Save this Changes</button>
   </div>
 </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  var editString = window.location.search;
+
+  var urlEditParams = new URLSearchParams(editString);
+  var fen = urlEditParams.get('fn')
+  var sen = urlEditParams.get('sn')
+  var eem = urlEditParams.get('em')  
+  var pen = urlEditParams.get('pn')
+  
+  var eFname = document.getElementById('editName01')
+  var eSname = document.getElementById('editLname01')
+  var eEname = document.getElementById('editEmail01')
+
+  eFname.value = fen
+  eSname.value = sen
+  eEname.value = eem
+
+</script>
 <script type="text/javascript">
 	/*$(document).ready(function () {
-		$("#editName01").val(myObject.fName);
-		$("#editLname01").val(myObject.lName);
-		$("#editEmail01").val(myObject.email);				
-		$("#editBtn").click(function(){
-			let phone = myObject.phoneNo;
-            let firstname = $("#editName01").val();
-            let secondname = $("#editLname01").val();
-            let address = $("#editEmail01").val();			
+		$("#editName01").val(fen);
+		$("#editLname01").val(sen);
+		$("#editEmail01").val(eem);				
+		//$("#editBtn").click(function(){
+			/*var phone = myObject.phoneNo;
+            var firstname = $("#editName01").val();
+            var secondname = $("#editLname01").val();
+            var address = $("#editEmail01").val();			
 			$.post("/sacco/backend/update.php",
                     {
                       det: phone,
@@ -50,6 +67,6 @@
 				});
 	   //$("#temp01").load("/sacco/saving.html");   
   
-		});
-	});*/
+		});*/
+	
 </script>
