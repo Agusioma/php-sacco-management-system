@@ -1,299 +1,535 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Home Page | JBCS</title>
-
-    <!-- Bootstrap CSS CDN -->
-
-<body>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="/sacco/style/home.css">
-    </head>
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div id="dismiss">
-                <i class="fas fa-arrow-left"></i>
+<html lang="zxx">
+   <head>
+      <title>JBSC</title>
+      <!--meta tags -->
+      <link rel = "icon" href = "https://sacco.terrence-aluda.com/sacco/assets/images/logo-sacco.png" type = "image/x-icon">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="Juja Business Sacco Community, Juja Business, Juja Sacco, Juja Community" />
+      <script>
+         addEventListener("load", function () {
+         	setTimeout(hideURLbar, 0);
+         }, false);
+         
+         function hideURLbar() {
+         	window.scrollTo(0, 1);
+         }
+      </script>
+      <!--//meta tags ends here-->
+      <!--booststrap-->
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+      <!--//booststrap end-->
+      <!-- font-awesome icons -->
+      <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+      <!-- //font-awesome icons -->
+      <!-- Owl Stylesheets -->
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <!--stylesheets-->
+      <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+      <!--//stylesheets-->
+      <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
+   </head>
+   <body>
+      <div class="header-outs" id="header">
+         <div class="header-w3layouts">
+            <div class="container-fluid">
+               <div class="row headder-contact">
+                  <div style="color: white; font-weight: bold" class="col-lg-6 col-md-5 col-sm-5 icons px-0">
+                        JUJA BUSINESS SACCO COMMUNITY
+                  </div>
+                  <div class="col-lg-6 col-md-7 col-sm-7 info-contact-agile">
+                     <ul>
+                        <li>
+                           <span class="fas fa-phone-volume"></span>
+                           <p>+(000)123 4565 32</p>
+                        </li>
+                        <li>
+                           <span class="fas fa-envelope"></span>
+                           <p><a href="mailto:info@example.com">info@example1.com</a></p>
+                        </li>
+                        <li>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!--//navigation section -->
+               <nav class="navbar navbar-expand-lg navbar-light">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                     <ul class="navbar-nav ">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#about" class="nav-link scroll">Products</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#testimonials" class="nav-link scroll">Founders</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="" class="nav-link scroll">About us</a>
+                        </li>                        
+                        <li class="nav-item">
+                           <a href="#stats" class="nav-link scroll">Stats</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="" class="nav-link scroll">Contact us</a>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+               <div class="hedder-up">
+                  <h1><a class="navbar-brand" href="">JBCS</a></h1>
+               </div>
+               <!--//navigation section -->
+               <div class="clearfix"> </div>
             </div>
-
-            <div class="sidebar-header">
-                <h3>JUJA BUSINESS COMMUNITY SACCO</h3>
+         </div>
+         <!--banner -->
+         <!-- Slideshow 4 -->
+         <div class="slider">
+            <div class="callbacks_container">
+               <ul class="rslides" id="slider4">
+                  <li>
+                     <div class="slider-img one-img">
+                        <div class="container">
+                           <div class="slider-info text-center">
+                              <h4>Personal Finance Services</h4>
+                              <h5>Lorem ipsum dolor</h5>
+                              <p>velit sagittis vehicula. Duis posuere 
+                                 ex in mollis iaculis. Suspendisse tincidunt
+                                 velit sagittis vehicula
+                              </p>
+                              <!-- <div class="outs_more-buttn">
+                                 <a href="#contact" class="scroll">Book Now</a>
+                                 </div> -->
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="slider-img two-img">
+                        <div class="container">
+                           <div class="slider-info text-center">
+                              <h4>Making Easy For You</h4>
+                              <h5>Tempo Dolor Lorem</h5>
+                              <p>velit sagittis vehicula. Duis posuere 
+                                 ex in mollis iaculis. Suspendisse tincidunt
+                                 velit sagittis vehicula
+                              </p>
+                              <!-- <div class="outs_more-buttn">
+                                 <a href="#contact" class="scroll">Book Now</a>
+                                 </div> -->
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="slider-img three-img">
+                        <div class="container">
+                           <div class="slider-info text-center">
+                              <h4>Credit Card For You</h4>
+                              <h5>Ipsum Dolor Eiusmo</h5>
+                              <p>velit sagittis vehicula. Duis posuere 
+                                 ex in mollis iaculis. Suspendisse tincidunt
+                                 velit sagittis vehicula
+                              </p>
+                              <!-- <div class="outs_more-buttn">
+                                 <a href="#contact" class="scroll">Book Now</a>
+                                 </div> -->
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
             </div>
-
-            <ul class="list-unstyled components">
-                <p>MAIN MENU</p>
-                <li class="active">
-                    <a href="#">MY PROFILE</a>
-                </li>
-                <li>
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">ACCOUNT</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a id="save01">Deposit</a>
-                        </li>
-                        <li>
-                            <a href="#">Withdraw</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#helpSubmenu" data-toggle="collapse" aria-expanded="false">HELP</a>
-                    <ul class="collapse list-unstyled" id="helpSubmenu">
-                        <li>
-                            <a href="#">Contact Us</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#setSubmenu" data-toggle="collapse" aria-expanded="false">SETTINGS</a>
-                    <ul class="collapse list-unstyled" id="setSubmenu">
-                        <li>
-                            <a href="#">Change Password</a>
-                        </li>
-                        <li>
-                            <a id="edit01">Update Profile</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">TERMS AND CONDITIONS</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">ABOUT US</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">LOG OUT</a>
-                </li>
-            </ul>
-
-            <ul class="list-unstyled CTAs">
-                <p>
-                    &copy;2021 all rights reserved. Developed and maintained by <a href="https://www.terrence-aluda.com/">Terrence Aluda</a>
-                </p>
-            </ul>
-        </nav>
-
-        <!-- Page Content  -->
-        <div id="content">
-
-            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #008081">
-                <div class="container-fluid">
-                    <p>
-
-
-                        <button style="z-index: 2" type="button" id="sidebarCollapse" class="btn btn-info">
-                            <i class="fas fa-align-left"></i>
-                            <span>Main Menu</span>
-                        </button>
-                        <div class="d-flex justify-content-center" style="padding: 2%; text-align: center; background-color: #008081">
-                            <h1 style="color: white">JUJA BUSINESS COMMUNITY SACCO</h1>
+            <!-- This is here just to demonstrate the callbacks -->
+            <!-- <ul class="events">
+               <li>Example 4 callback events</li>
+               </ul>-->
+         </div>
+         <div class="clearfix"></div>
+      </div>
+      <!-- //banner -->
+      <!-- About-one -->
+      <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
+         <div class="container-fluid py-lg-5 py-md-5 py-sm-4 py-3">
+            <div class="title-sub text-left mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+               <h3 class="title mb-md-4 mb-sm-3 mb-3">What We Offer</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>tempor incididunt ut labore et</p>
+            </div>
+            <div class="row abt-colm pb-lg-4 pb-md-3 pb-3">
+               <div class="col-lg-5 agile-info-img">
+                  <img src="images/ab1.jpg" class="img-fluid" alt="">
+               </div>
+               <div class="col-lg-5 agile-abt-info about-grid">
+                  <div class="info-sub-w3">
+                     <h5>velit sagittis vehicula. Duis posuere ex in mollis iaculis. 
+                        Suspendisse tincidunt ut velit id euismod
+                     </h5>
+                  </div>
+                  <h4>SAVINGS</h4>
+                  <div class="info-sub-w3">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="row abt-colm my-lg-5 my-md-4 my-3">
+               <div class="offset-md-2 col-lg-5 agile-abt-info text-right">
+                  <div class="info-sub-w3">
+                     <h5>velit sagittis vehicula. Duis posuere ex in mollis iaculis. 
+                        Suspendisse tincidunt ut velit id euismod
+                     </h5>
+                  </div>
+                  <h4>Investment</h4>
+                  <div class="info-sub-w3">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-5 agile-info-img about-grid">
+                  <img src="images/ab2.jpg" class="img-fluid" alt="">
+               </div>
+            </div>
+            <div class="row abt-colm pt-lg-4 pt-md-3 pt-3">
+               <div class="col-lg-5 agile-info-img">
+                  <img src="images/ab3.jpg" class="img-fluid" alt="">
+               </div>
+               <div class="col-lg-5 agile-abt-info about-grid">
+                  <div class="info-sub-w3">
+                     <h5>velit sagittis vehicula. Duis posuere ex in mollis iaculis. 
+                        Suspendisse tincidunt ut velit id euismod
+                     </h5>
+                  </div>
+                  <h4>Deposit</h4>
+                  <div class="info-sub-w3">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <!-- //About-one -->
+         </div>
+      </section>
+      <!--states -->
+      <section class="stats py-lg-4 py-md-3 py-sm-3 py-3 " id="stats">
+         <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+            <div class="jst-must-info text-center">
+               <div class="row stats-info">
+                  <div class="col-md-3 col-sm-6 col-6 stats-grid-1">
+                     <div class=" stats-grid">
+                        <div class="counter">2041</div>
+                        <div class="stat-info">
+                           <h5 class="pt-2">Members</h5>
                         </div>
-                    </p>
-                </div>
-            </nav>
-            <p>
-                <div id="temp01" class="container" style=" min-width: 100%">
-                    <div class="row">
-                        <div class="col-sm-6 d-flex justify-content-around">
-                            <div class="container" style="margin-bottom: 5%">
-                                <div class="card" style="padding: 10%; padding-top: 6%">
-                                    <h3 style="text-align: center; color: #008081">Account</h3>
-
-                                    <div class="row">
-                                        <div class=" card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                                            <div class="card shadow bg-white border-light" style="max-width: 15rem">
-                                                <div class="card-body" style="text-align: center">
-                                                    <!--<div class="col-sm-4 d-flex justify-content-evenly">
-                                                <img class="rounded" style="width: 200%" src="{{ '/picsavings.jpg' }}" alt="limit icon">
-                                            </div>-->
-                                                    <!--<div class="col-sm-8">-->
-                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Savings</h6>
-                                                    <h6 class="card-text" style="font-size: 0.75rem">Ksh. </h6>
-                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">125,632.00</h6>
-                                                    <!--</div>-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
-                                                <div class="card-body" style="text-align: center">
-                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Dividends</h6>
-                                                    <h6 class="card-text" style="font-size: 0.75rem">Ksh. </h6>
-                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">125,632.00</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-6 stats-grid-2">
+                     <div class=" stats-grid">
+                        <div class="counter">27</div>
+                        <div class="stat-info">
+                           <h5 class="pt-2"> Customer Support</h5>
                         </div>
-                        <div class="col-sm-6 d-flex justify-content-evenly">
-                            <div class="container">
-                                <div class="card" style="padding: 10%; padding-top: 6%">
-                                    <h3 style="text-align: center; color: #008081">Loans</h3>
-                                    <div class="row ">
-                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
-                                                <div class="card-body" style="text-align: center">
-                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Loan balance</h6>
-                                                    <h6 class="card-text" style="font-size: 0.75rem">Ksh. </h6>
-                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">125,632.00</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
-                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
-                                                <div class="card-body" style="text-align: center">
-                                                    <h5 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Loan Limit</h5>
-                                                    <h6 class="card-text" style="font-size: 0.75rem">Ksh. </h6>
-                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">125,639,922.00</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-6 stats-grid-3">
+                     <div class=" stats-grid">
+                        <div class="counter">1014</div>
+                        <div class="stat-info">
+                           <h5 class="pt-2"> Giveaways</h5>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-6 stats-grid-4">
+                     <div class=" stats-grid">
+                        <div class="counter">52</div>
+                        <div class="stat-info">
+                           <h5 class="pt-2"> Projects </h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--//states -->
+      <!-- clients -->
+      <section class="clients py-lg-4 py-md-3 py-sm-3 py-3" id="testimonials">
+         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+            <div class="title-sub text-left mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+               <h3 class="title clr mb-md-4 mb-sm-3 mb-3">Our Founders</h3>
+               <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>tempor incididunt ut labore et</p>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-5 px-0 clients-w3layouts-row text-center">
+                           <img src="images/c1.jpg" alt="" class="image-fluid">
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-sm-7 news-agile-text ">
+                           <p>velit sagittis vehicula. Duis posuere 
+                              ex in mollis iaculis. Suspendisse tincidunt
+                              velit sagittis vehicula. Duis posuere 
+                              Suspendisse tincidunt
+                              velit sagittis vehicula. Duis posuere 
+                           </p>
+                           <h4 class="mt-3">Milky Deo 
+                           </h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-5 px-0 clients-w3layouts-row text-center">
+                           <img src="images/c2.jpg" alt="" class="image-fluid">
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-sm-7 news-agile-text ">
+                           <p>velit sagittis vehicula. Duis posuere 
+                              ex in mollis iaculis. Suspendisse tincidunt
+                              velit sagittis vehicula. Duis posuere 
+                              Suspendisse tincidunt
+                              velit sagittis vehicula. Duis posuere 
+                           </p>
+                           <h4 class="mt-3">Milky Deo 
+                           </h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-5 px-0 clients-w3layouts-row text-center">
+                           <img src="images/c3.jpg" alt="" class="image-fluid">
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-sm-7 news-agile-text ">
+                           <p>velit sagittis vehicula. Duis posuere 
+                              ex in mollis iaculis. Suspendisse tincidunt
+                              velit sagittis vehicula. Duis posuere 
+                              Suspendisse tincidunt
+                              velit sagittis vehicula. Duis posuere 
+                           </p>
+                           <h4 class="mt-3">Milky Deo 
+                           </h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+      </section>
+      <!--//clients -->
+      <!-- footer -->
+      <footer class="buttom-footer py-lg-4 py-md-3 py-sm-3 py-3">
+         <section >
+            <div class="container py-lg-5 py-md-5 py-sm-4 py-4">
+               <div class="">
+                  <div class="row footer-agile-grids ">
+                     <div class="col-lg-4 col-md-4 col-sm-12 wthree-left-right">
+                        <h4 class="pb-lg-3 pb-3"></h4>
+                        <div class="footer-info">
+                           <p>Lorem ipsum dolor sit amet, eiusmod tempor incididunt ut labore et</p>
+                        </div>
+                        <div class="icons mt-lg-4 mt-3 text-left">
+                           <ul>
+                              <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                              <li><a href="#"><span class="fas fa-envelope"></span></a></li>
+                              <li><a href="#"><span class="fas fa-rss"></span></a></li>
+                              <li><a href="#"><span class="fab fa-vk"></span></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4 col-sm-12 wthree-left-right">
+                        <h4 class="pb-lg-3 pb-3">Links</h4>
+                        <nav class="border-line">
+                           <ul class="nav flex-column">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#about" class="nav-link scroll">Products</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#testimonials" class="nav-link scroll">Founders</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="" class="nav-link scroll">About us</a>
+                        </li>                        
+                        <li class="nav-item">
+                           <a href="#stats" class="nav-link scroll">Stats</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="" class="nav-link scroll">Contact us</a>
+                        </li>
+                           </ul>
+                        </nav>
+                     </div>
+                     <div class="wthree-left-right col-lg-4 col-md-4 col-sm-12">
+                        <h4 class="pb-lg-3 pb-3">Get In Touch</h4>
+                        <div class="bottom-para pb-3">
+                           <p>0000 Hse 21, Gachororo,<br>Juja, Kenya.</p>
+                        </div>
+                        <div class="bottom-para">
+                           <p>+(000) 123 4565 32 <br>+(010) 123 4565 354</p>
+                        </div>
+                        <div class="bottom-para pt-3">
+                           <p><a href="mailto:info@example.com">info@example1.com</a> 
+                              <br><a href="mailto:info@example.com">info@example2.com</a>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="copy-agile-right text-center">
+            <h2 class="my-3"><a href="index.html">Juja Business Community Sacco</a></h2>
+            <p> 
+               ©2021. All Rights Reserved | Designed and Maintained by <a href="https://www.terrence-aluda.com" >Terrence Aluda</a>
             </p>
-            <p>
-                <div class="container" style=" min-width: 100%">
-                    <div class="row">
-                        <div class="col-sm-12 d-flex justify-content-around">
-                            <div class="container" style="margin-bottom: 5%">
-                                <div class="card" style="padding: 10%; padding-top: 6%">
-                                    <h3 style="text-align: center; color: #008081">Statements</h3>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th class="text-danger">TRANS. ID</th>
-                                                <th style="text-align: start" class="text-danger">TYPE</th>
-                                                <th class="text-danger">AMOUNT</th>
-                                                <th class="text-danger">TIME</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-
-                                    <div style="max-height: 50vh; overflow-y: scroll;" class="row">
-                                        <table class="table table-striped ">
-
-                                            <tbody>
-                                                <tr>
-                                                    <td>PC978GHDR</td>
-                                                    <td style="text-align: center">DEPOSIT</td>
-                                                    <td style="text-align: center">Ksh. 7000</td>
-                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PC978GHDR</td>
-                                                    <td style="text-align: center">DEPOSIT</td>
-                                                    <td style="text-align: center">Ksh. 7000</td>
-                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PC978GHDR</td>
-                                                    <td style="text-align: center">DEPOSIT</td>
-                                                    <td style="text-align: center">Ksh. 7000</td>
-                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PC978GHDR</td>
-                                                    <td style="text-align: center">DEPOSIT</td>
-                                                    <td style="text-align: center">Ksh. 7000</td>
-                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PC978GHDR</td>
-                                                    <td style="text-align: center">DEPOSIT</td>
-                                                    <td style="text-align: center">Ksh. 7000</td>
-                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PC978GHDR</td>
-                                                    <td style="text-align: center">DEPOSIT</td>
-                                                    <td style="text-align: center">Ksh. 7000</td>
-                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PC978GHDR</td>
-                                                    <td style="text-align: center">DEPOSIT</td>
-                                                    <td style="text-align: center">Ksh. 7000</td>
-                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PC978GHDR</td>
-                                                    <td style="text-align: center">DEPOSIT</td>
-                                                    <td style="text-align: center">Ksh. 7000</td>
-                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </p>
-        </div>
-    </div>
-
-</body>
-<div class="overlay"></div>
-
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-<!-- jQuery Custom Scroller CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#sidebar").mCustomScrollbar({
-            theme: "minimal"
-        });
-
-        $('#dismiss, .overlay').on('click', function() {
-            $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active');
-        });
-
-        $('#sidebarCollapse').on('click', function() {
-            $('#sidebar').addClass('active');
-            $('.overlay').addClass('active');
-            $('.collapse.in').toggleClass('in');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        });
-
-        $("#save01").click(function() {
-            $("#temp01").load("/sacco/saving.html");
-            $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active');
-        });
-        $("#edit01").click(function() {
-            $("#temp01").load("/sacco/edit.html");
-            $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active');            
-        });
-    });
-</script>
-
-</body>
-
+         </div>
+      </footer>
+      <!-- //footer -->
+      <!--model-->
+      <div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title" id="exampleModalLiveLabel">Financial</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <img src="images/b2.jpg" alt="" class="img-fluid">
+                  <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                     eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellu
+                  </p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--//model-->
+      <!--js working-->
+      <script src='js/jquery-2.2.3.min.js'></script>
+      <!--//js working--> 
+      <!--responsiveslides banner-->
+      <script src="js/responsiveslides.min.js"></script>
+      <script>
+         // You can also use "$(window).load(function() {"
+         $(function () {
+         	// Slideshow 4
+         	$("#slider4").responsiveSlides({
+         		auto: true,
+         		pager:false,
+         		nav:true ,
+         		speed: 900,
+         		namespace: "callbacks",
+         		before: function () {
+         			$('.events').append("<li>before event fired.</li>");
+         		},
+         		after: function () {
+         			$('.events').append("<li>after event fired.</li>");
+         		}
+         	});
+         
+         });
+      </script>
+      <!--// responsiveslides banner-->		  
+      <!--About OnScroll-Number-Increase-JavaScript -->
+      <script src="js/jquery.waypoints.min.js"></script>
+      <script src="js/jquery.countup.js"></script>
+      <script>
+         $('.counter').countUp();
+      </script>
+      <!-- //OnScroll-Number-Increase-JavaScript -->
+      <!--Owl slider blog -->
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         $(document).ready(function() {
+           $('.owl-carousel').owlCarousel({
+             loop: true,
+             margin: 10,
+             responsiveClass: true,
+             responsive: {
+               0: {
+                 items: 1,
+                 nav: true
+               },
+         991: {
+                 items: 2,
+                 nav:true,
+               },
+               600: {
+                 items: 2,
+                 nav: true,
+               },
+               1000: {
+                 items: 3,
+                 nav: true,
+                 loop: false,
+                 margin: 15
+               }
+             }
+           })
+         })
+      </script>
+      <!--// Owl slider blog -->
+      <!-- start-smoth-scrolling -->
+      <script src="js/move-top.js"></script>
+      <script src="js/easing.js"></script>
+      <script>
+         jQuery(document).ready(function ($) {
+         	$(".scroll").click(function (event) {
+         		event.preventDefault();
+         		$('html,body').animate({
+         			scrollTop: $(this.hash).offset().top
+         		}, 900);
+         	});
+         });
+      </script>
+      <!-- start-smoth-scrolling -->
+      <!-- here stars scrolling icon -->
+      <script>
+         $(document).ready(function () {
+         
+         	var defaults = {
+         		containerID: 'toTop', // fading element id
+         		containerHoverID: 'toTopHover', // fading element hover id
+         		scrollSpeed: 1200,
+         		easingType: 'linear'
+         	};
+         
+         
+         	$().UItoTop({
+         		easingType: 'easeOutQuart'
+         	});
+         
+         });
+      </script>
+      <!-- //here ends scrolling icon -->
+      <!--bootstrap working-->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- //bootstrap working-->
+   </body>
 </html>
