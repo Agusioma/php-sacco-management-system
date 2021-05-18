@@ -51,8 +51,12 @@
                            <p><a href="mailto:info@example.com">info@example1.com</a></p>
                         </li>
                         <li>
+                         <button style="z-index: 2" type="button" id="get01" class="btn btn-dark">
+                            <span style="font-weight: bold">&nbsp;Get Started</span>
+                        </button>
                         </li>
                      </ul>
+
                   </div>
                </div>
                <!--//navigation section -->
@@ -72,13 +76,13 @@
                            <a href="#testimonials" class="nav-link scroll">Founders</a>
                         </li>
                         <li class="nav-item">
-                           <a href="" class="nav-link scroll">About us</a>
+                           <a href="#about" class="nav-link scroll">About us</a>
                         </li>                        
                         <li class="nav-item">
                            <a href="#stats" class="nav-link scroll">Stats</a>
                         </li>
                         <li class="nav-item">
-                           <a href="" class="nav-link scroll">Contact us</a>
+                           <a href="#contact" class="nav-link scroll">Contacts</a>
                         </li>
                      </ul>
                   </div>
@@ -168,12 +172,13 @@
                   <img src="images/ab1.jpg" class="img-fluid" alt="">
                </div>
                <div class="col-lg-5 agile-abt-info about-grid">
+
+                  <h4>Savings</h4>
                   <div class="info-sub-w3">
                      <h5>velit sagittis vehicula. Duis posuere ex in mollis iaculis. 
                         Suspendisse tincidunt ut velit id euismod
                      </h5>
-                  </div>
-                  <h4>SAVINGS</h4>
+                  </div>                  
                   <div class="info-sub-w3">
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -183,12 +188,13 @@
             </div>
             <div class="row abt-colm my-lg-5 my-md-4 my-3">
                <div class="offset-md-2 col-lg-5 agile-abt-info text-right">
+
+                  <h4>Investment</h4>
                   <div class="info-sub-w3">
                      <h5>velit sagittis vehicula. Duis posuere ex in mollis iaculis. 
                         Suspendisse tincidunt ut velit id euismod
                      </h5>
-                  </div>
-                  <h4>Investment</h4>
+                  </div>                  
                   <div class="info-sub-w3">
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -204,12 +210,13 @@
                   <img src="images/ab3.jpg" class="img-fluid" alt="">
                </div>
                <div class="col-lg-5 agile-abt-info about-grid">
+
+                  <h4>Deposit</h4>
                   <div class="info-sub-w3">
                      <h5>velit sagittis vehicula. Duis posuere ex in mollis iaculis. 
                         Suspendisse tincidunt ut velit id euismod
                      </h5>
-                  </div>
-                  <h4>Deposit</h4>
+                  </div>                  
                   <div class="info-sub-w3">
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -350,8 +357,6 @@
                            <ul>
                               <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
                               <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-                              <li><a href="#"><span class="fas fa-rss"></span></a></li>
-                              <li><a href="#"><span class="fab fa-vk"></span></a></li>
                            </ul>
                         </div>
                      </div>
@@ -380,7 +385,7 @@
                            </ul>
                         </nav>
                      </div>
-                     <div class="wthree-left-right col-lg-4 col-md-4 col-sm-12">
+                     <div id="contact" class="wthree-left-right col-lg-4 col-md-4 col-sm-12">
                         <h4 class="pb-lg-3 pb-3">Get In Touch</h4>
                         <div class="bottom-para pb-3">
                            <p>0000 Hse 21, Gachororo,<br>Juja, Kenya.</p>
@@ -492,6 +497,9 @@
                }
              }
            })
+        $("#get01").click(function() {
+            window.location.href = "https://sacco.terrence-aluda.com/sacco/sign.html?member='notyet'";
+        });           
          })
       </script>
       <!--// Owl slider blog -->
