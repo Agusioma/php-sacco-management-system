@@ -1,0 +1,74 @@
+        <div class="d-flex align-items-center justify-content-center vw-100 vh-100" style="padding-bottom: 3vh">
+            <div  class="card container" style="min-width: 90vw">
+                              <div style="background-color: white; text-align: center; padding-top: 3.5vh" class="card-text text-danger">
+                                <h3>Your Details</h3>
+                            </div>                
+                <div class="card-body row"style="min-width: 90vw;">
+                <div class="col-md-12  d-flex align-items-center justify-content-center">                
+                            <div class="card-body" style=" max-width: 95vw;">  
+                            <div class="mb-3">
+                                  <div class="d-flex vw-50" style="text-align: left">
+                                    <h5 style="color: #008081">NAME:&nbsp;</h5><h5 id="myName" style=" white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                  <div class="d-flex vw-50" style="text-align: left">
+                                    <h5 style="color: #008081;">ID NUMBER:&nbsp;</h5><h5 id="myID" style=" white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                  <div class="d-flex vw-50" style="text-align: left">
+                                    <h5 style="color: #008081">PHONE NUMBER:&nbsp;</h5><h5 id="myNo" style=" white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                  <div class="d-flex vw-50" style="text-align: left">
+                                   <h5 style="color: #008081">EMAIL ADDRESS:&nbsp;</h5><h5 id="myEmail" style=" white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                    <div class="d-flex vw-50" style="text-align: left">
+                                      <h5 style="color: #008081">REGISTRATION DATE:&nbsp;</h5><h5 id="myReg" style="white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                      </div>
+                            </div>  
+                            <div class="mb-3">
+                                    <div class="d-flex vw-50" style="text-align: left">
+                                      <h5 style="color: #008081; ">DURATION STAYED:&nbsp;</h5><h5 id="myDur" style="white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                      </div>
+                            </div>                             
+                            <div class="mb-3" style="text-align: center">              
+                              <button id="toEdit" class="btn" style="background-color: #008081; color: white"><i class="fa fa-pencil"></i> Edit Details</button>
+                          </div>                         
+                    </div>
+                </div>
+                </div>            
+                </div>
+            </div>    
+        </div>
+<script type="text/javascript">
+  var editString = window.location.search;
+
+  var urlEditParams = new URLSearchParams(editString);
+  var fpn = urlEditParams.get('fn')
+  var spn = urlEditParams.get('sn')
+  var pem = urlEditParams.get('em')  
+  var epn = urlEditParams.get('pn')
+  var cdur = urlEditParams.get('cdur')
+  var rD = urlEditParams.get('rD')
+  var ci = urlEditParams.get('ci')
+
+  var myName = document.getElementById('myName')
+  var myID = document.getElementById('myID')
+  var myReg = document.getElementById('myReg')
+  var myDur = document.getElementById('myDur')
+  var myNo = document.getElementById('myNo')
+  var myEmail = document.getElementById('myEmail')
+
+  myName.innerHTML = fpn + " " + spn
+  myNo.innerHTML = epn
+  myEmail.innerHTML = pem
+  myDur.innerHTML = cdur
+  myID.innerHTML = ci
+  myReg.innerHTML = rD
+
+</script>

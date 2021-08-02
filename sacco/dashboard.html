@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home Page | JBCS</title>
+    <link rel = "icon" href = "assets/images/logo-sacco.png" type = "image/x-icon">
+    <!-- Bootstrap CSS CDN -->
+    <style type="text/css">
+    </style>
+
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/sacco/style/home.css">
+    </head>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <h3>JUJA BUSINESS COMMUNITY SACCO</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p style="font-size: 150%; font-weight: bold">MAIN MENU</p>
+               <li class="active">
+                    <a id="home01">HOME</a>
+                </li>
+                <li>
+                    <a id="prof01">MY PROFILE</a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">ACCOUNT</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a id="save01">Deposit</a>
+                        </li>
+                        <!--<li>
+                            <a href="#">Withdraw</a>
+                        </li>-->
+                    </ul>
+                </li>
+                <li>
+                    <a href="#helpSubmenu" data-toggle="collapse" aria-expanded="false">HELP</a>
+                    <ul class="collapse list-unstyled" id="helpSubmenu">
+                        <li>
+                            <a id="contact01">Contact Us</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#setSubmenu" data-toggle="collapse" aria-expanded="false">SETTINGS</a>
+                    <ul class="collapse list-unstyled" id="setSubmenu">
+                       <!--<li>
+                            <a href="#">Change Password</a>
+                        </li>-->
+                        <li>
+                            <a id="edit01">Update Profile</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--<li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">TERMS AND CONDITIONS</a>
+                </li>-->
+                <li>
+                    <a id="term01" data-toggle="collapse" aria-expanded="false">LOG OUT</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <p>
+                    &copy;2021 all rights reserved. Developed and maintained by <a href="https://www.terrence-aluda.com/">Terrence Aluda</a>
+                </p>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #008081">
+                <div class="container-fluid">
+                    <p>
+
+
+                        <button style="z-index: 2" type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                            <span>Main Menu</span>
+                        </button>
+                        <div class="d-flex justify-content-center" style="padding: 2%; text-align: center; background-color: #008081">
+                            <h1 style="color: white">JUJA BUSINESS COMMUNITY SACCO</h1>
+                        </div>
+                    </p>
+                </div>
+            </nav>
+            <p>
+                <div id="temp01" class="container" style=" min-width: 100%">
+                  <div class="d-flex  vw-70 vh-70">
+                  <h4>Welcome&nbsp;</h4><h4 id="nme01" class="text-danger"></h4>
+                </div>
+                    <div class="row">
+                        <div class="col-sm-6 d-flex justify-content-around">
+                            <div class="container" style="margin-bottom: 5%">
+                                <div class="card" style="padding: 10%; padding-top: 6%">
+                                    <h3 style="text-align: center; color: #008081">Account</h3>
+
+                                    <div class="row">
+                                        <div class=" card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
+                                            <div class="card shadow bg-white border-light" style="max-width: 15rem">
+                                                <div class="card-body" style="text-align: center">
+                                                    <!--<div class="col-sm-4 d-flex justify-content-evenly">
+                                                <img class="rounded" style="width: 200%" src="{{ '/picsavings.jpg' }}" alt="limit icon">
+                                            </div>-->
+                                                    <!--<div class="col-sm-8">-->
+                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Savings</h6>
+                                                    <h6 class="card-text text-primary" style="font-size: 0.75rem">Ksh. </h6>
+                                                    <h6 id="sav01" class="card-text" style="font-weight: bold; font-size: 0.65rem"></h6>
+                                                    <!--</div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
+                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
+                                                <div class="card-body" style="text-align: center">
+                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Dividends</h6>
+                                                    <h6 class="card-text text-primary" style="font-size: 0.75rem">Ksh. </h6>
+                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">0.00</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-evenly">
+                            <div class="container">
+                                <div class="card" style="padding: 10%; padding-top: 6%">
+                                    <h3 style="text-align: center; color: #008081">Loans</h3>
+                                    <div class="row ">
+                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
+                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
+                                                <div class="card-body" style="text-align: center">
+                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Loan balance</h6>
+                                                    <h6 class="card-text text-primary" style="font-size: 0.75rem">Ksh. </h6>
+                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">0.00</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
+                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
+                                                <div class="card-body" style="text-align: center">
+                                                    <h5 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Loan Limit</h5>
+                                                    <h6 class="card-text text-primary" style="font-size: 0.75rem">Ksh. </h6>
+                                                    <h6 id="lim01" class="card-text" style="font-weight: bold; font-size: 0.65rem"></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="container" id="tranc" style=" min-width: 100%">
+                    <div class="row">
+                        <div class="col-sm-12 d-flex justify-content-around">
+                            <div class="container" style="margin-bottom: 5%">
+                                <div class="card" style="padding: 10%; padding-top: 6%">
+                                    <h3 style="text-align: center; color: #008081">Statements</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-danger">TRANS. ID</th>
+                                                <th style="text-align: start" class="text-danger">TYPE</th>
+                                                <th class="text-danger">AMOUNT</th>
+                                                <th class="text-danger">TIME</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+
+                                    <div style="max-height: 50vh; overflow-y: scroll;" class="row">
+                                        <table class="table table-striped ">
+
+                                            <tbody id="trans01" >
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        </div>
+    </div>
+
+</body>
+<div class="overlay"></div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+  var queryString = window.location.search;
+
+  var urlParams = new URLSearchParams(queryString);
+  var fn = urlParams.get('fn')
+  var sn = urlParams.get('sn')
+  var em = urlParams.get('em')  
+  var pn = urlParams.get('pn') 
+  var dur = urlParams.get('dur')
+  
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $("#nme01").html(fn+",")
+
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function() {
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+
+        $('#sidebarCollapse').on('click', function() {
+            $('#sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+
+        $("#save01").click(function() {
+            $("#temp01").load("/sacco/saving.html");
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+            $("#tranc").hide()
+        });
+        $("#edit01").click(function() {
+            $("#temp01").load("/sacco/edit.html");
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active'); 
+            $("#tranc").hide()           
+        });
+        $("#prof01").click(function() {
+            $("#temp01").load("/sacco/profile.html");
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active'); 
+            $("#tranc").hide()           
+        });  
+        $("#contact01").click(function() {
+            $("#temp01").load("/sacco/contact.html");
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+            $("#tranc").hide()
+        }); 
+        $("#home01").click(function() {
+            var urlTo = new URL("https://sacco.terrence-aluda.com/sacco/dashboard.html");
+                       urlTo.searchParams.append('fn', fn);
+                       urlTo.searchParams.append('sn', sn);
+                       urlTo.searchParams.append('em', em);
+                       urlTo.searchParams.append('pn', pn);
+                       urlTo.searchParams.append('dur', dur);
+                      window.location.replace(urlTo);
+                  })
+        $("#term01").click(function() {
+            window.location.replace("https://sacco.terrence-aluda.com/sacco/signin.html");
+        });        
+                $.post("https://sacco.terrence-aluda.com/sacco/backend/trans.php",
+                    {
+                      pn: pn
+                    }, 
+                  function(result){
+
+                      $("#trans01").html(result)
+
+                }); 
+                $.post("https://sacco.terrence-aluda.com/sacco/backend/savings.php",
+                    {
+                      phone: pn,
+                      email: em
+                    }, 
+                  function(result){
+                    //let sav = result
+                      if(dur >= 6){
+                        $("#lim01").html((result * 2)+".00")
+                      }else{
+                        $("#lim01").html("0.00")
+                      }
+                      $("#sav01").html(result+".00")
+
+                });                      
+    });
+      $(document).on('click', '#payBtn', function(event){
+        event.preventDefault()
+                let phone = pn;
+                let amount  = $("#cash01").val();
+
+                $.post("https://sacco.terrence-aluda.com/sacco/backend/stk_initiate.php",
+                    {
+                      number: phone,
+                      amount: amount
+                    }, 
+                  function(result){
+
+                });
+  });
+      $(document).on('click', '#toEdit', function(event){
+            $("#temp01").load("/sacco/edit.html");
+            $("#tranc").hide()
+  });      
+        $(document).on('click', '#editBtn', function(event){
+
+            $.post("https://sacco.terrence-aluda.com/sacco/backend/update.php",
+                    {
+                      det: pn,
+                      name1: eFname.value,
+                      name2: eSname.value,
+                      email: eEname.value
+                    },
+                  function(result){
+                      let obj = JSON.parse(result)
+                       fn = obj.firstname
+                       sn = obj.secondname
+                       em = obj.emailaddress
+                       pn = obj.phonenumber
+                       dur = obj.duration
+                       var url = new URL("https://sacco.terrence-aluda.com/sacco/dashboard.html");
+                       url.searchParams.append('fn', fn);
+                       url.searchParams.append('sn', sn);
+                       url.searchParams.append('em', em);
+                       url.searchParams.append('pn', pn);
+                       url.searchParams.append('dur', dur);
+                      window.location.replace(url);
+                });
+  });
+        $(document).on('click', '#btn01', function(event){
+          event.preventDefault();
+          var name = fn + " " + sn;
+          var email = em;
+          var subject = $("#sub01").val();
+          var message = $("#message01").val();  
+
+          if(!subject||!message){
+                    $("#banner3").text("Failed. Please fill in all the fields.")
+                    if(!subject){
+                      $("#sub01").focus();
+                    }else{
+                      $("#message01").focus();
+                    }
+          }else{  
+              $.post("https://sacco.terrence-aluda.com/sacco/backend/mail.php",
+                  {
+                    nameEm: name,
+                    emailTS: email,
+                    subEm: subject,
+                    messEm: message
+                  }, 
+                function(result){
+                  $("#banner3").text("Your message was sent successfully")
+                  $("#sub01").val('');
+                  $("#message01").val('');
+              });
+            }
+            });        
+</script>
+
+</body>
+
+</html>

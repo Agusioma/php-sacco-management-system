@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Home Page | JBCS</title>
+
+    <!-- Bootstrap CSS CDN -->
+
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/sacco/style/home.css">
+    </head>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <h3>JUJA BUSINESS COMMUNITY SACCO</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>MAIN MENU</p>
+                <li class="active">
+                    <a href="#">MY PROFILE</a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">ACCOUNT</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a id="save01">Deposit</a>
+                        </li>
+                        <li>
+                            <a href="#">Withdraw</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#helpSubmenu" data-toggle="collapse" aria-expanded="false">HELP</a>
+                    <ul class="collapse list-unstyled" id="helpSubmenu">
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#setSubmenu" data-toggle="collapse" aria-expanded="false">SETTINGS</a>
+                    <ul class="collapse list-unstyled" id="setSubmenu">
+                        <li>
+                            <a href="#">Change Password</a>
+                        </li>
+                        <li>
+                            <a id="edit01">Update Profile</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">TERMS AND CONDITIONS</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">ABOUT US</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">LOG OUT</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <p>
+                    &copy;2021 all rights reserved. Developed and maintained by <a href="https://www.terrence-aluda.com/">Terrence Aluda</a>
+                </p>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #008081">
+                <div class="container-fluid">
+                    <p>
+
+
+                        <button style="z-index: 2" type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                            <span>Main Menu</span>
+                        </button>
+                        <div class="d-flex justify-content-center" style="padding: 2%; text-align: center; background-color: #008081">
+                            <h1 style="color: white">JUJA BUSINESS COMMUNITY SACCO</h1>
+                        </div>
+                    </p>
+                </div>
+            </nav>
+            <p>
+                <div id="temp01" class="container" style=" min-width: 100%">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex justify-content-around">
+                            <div class="container" style="margin-bottom: 5%">
+                                <div class="card" style="padding: 10%; padding-top: 6%">
+                                    <h3 style="text-align: center; color: #008081">Account</h3>
+
+                                    <div class="row">
+                                        <div class=" card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
+                                            <div class="card shadow bg-white border-light" style="max-width: 15rem">
+                                                <div class="card-body" style="text-align: center">
+                                                    <!--<div class="col-sm-4 d-flex justify-content-evenly">
+                                                <img class="rounded" style="width: 200%" src="{{ '/picsavings.jpg' }}" alt="limit icon">
+                                            </div>-->
+                                                    <!--<div class="col-sm-8">-->
+                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Savings</h6>
+                                                    <h6 class="card-text" style="font-size: 0.75rem">Ksh. </h6>
+                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">125,632.00</h6>
+                                                    <!--</div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
+                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
+                                                <div class="card-body" style="text-align: center">
+                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Dividends</h6>
+                                                    <h6 class="card-text" style="font-size: 0.75rem">Ksh. </h6>
+                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">125,632.00</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-evenly">
+                            <div class="container">
+                                <div class="card" style="padding: 10%; padding-top: 6%">
+                                    <h3 style="text-align: center; color: #008081">Loans</h3>
+                                    <div class="row ">
+                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
+                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
+                                                <div class="card-body" style="text-align: center">
+                                                    <h6 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Loan balance</h6>
+                                                    <h6 class="card-text" style="font-size: 0.75rem">Ksh. </h6>
+                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">125,632.00</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-group col-sm-6 d-flex justify-content-around" style="margin-bottom: 5%">
+                                            <div class="card card shadow bg-white border-light" style="max-width: 15rem">
+                                                <div class="card-body" style="text-align: center">
+                                                    <h5 class="card-title text-danger" style="font-weight: bold; font-size: 0.75rem">Loan Limit</h5>
+                                                    <h6 class="card-text" style="font-size: 0.75rem">Ksh. </h6>
+                                                    <h6 class="card-text" style="font-weight: bold; font-size: 0.65rem">125,639,922.00</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="container" style=" min-width: 100%">
+                    <div class="row">
+                        <div class="col-sm-12 d-flex justify-content-around">
+                            <div class="container" style="margin-bottom: 5%">
+                                <div class="card" style="padding: 10%; padding-top: 6%">
+                                    <h3 style="text-align: center; color: #008081">Statements</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-danger">TRANS. ID</th>
+                                                <th style="text-align: start" class="text-danger">TYPE</th>
+                                                <th class="text-danger">AMOUNT</th>
+                                                <th class="text-danger">TIME</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+
+                                    <div style="max-height: 50vh; overflow-y: scroll;" class="row">
+                                        <table class="table table-striped ">
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>PC978GHDR</td>
+                                                    <td style="text-align: center">DEPOSIT</td>
+                                                    <td style="text-align: center">Ksh. 7000</td>
+                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PC978GHDR</td>
+                                                    <td style="text-align: center">DEPOSIT</td>
+                                                    <td style="text-align: center">Ksh. 7000</td>
+                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PC978GHDR</td>
+                                                    <td style="text-align: center">DEPOSIT</td>
+                                                    <td style="text-align: center">Ksh. 7000</td>
+                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PC978GHDR</td>
+                                                    <td style="text-align: center">DEPOSIT</td>
+                                                    <td style="text-align: center">Ksh. 7000</td>
+                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PC978GHDR</td>
+                                                    <td style="text-align: center">DEPOSIT</td>
+                                                    <td style="text-align: center">Ksh. 7000</td>
+                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PC978GHDR</td>
+                                                    <td style="text-align: center">DEPOSIT</td>
+                                                    <td style="text-align: center">Ksh. 7000</td>
+                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PC978GHDR</td>
+                                                    <td style="text-align: center">DEPOSIT</td>
+                                                    <td style="text-align: center">Ksh. 7000</td>
+                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PC978GHDR</td>
+                                                    <td style="text-align: center">DEPOSIT</td>
+                                                    <td style="text-align: center">Ksh. 7000</td>
+                                                    <td style="text-align: center">2021-02-02 11:01 am</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        </div>
+    </div>
+
+</body>
+<div class="overlay"></div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function() {
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+
+        $('#sidebarCollapse').on('click', function() {
+            $('#sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+
+        $("#save01").click(function() {
+            $("#temp01").load("/sacco/saving.html");
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+        $("#edit01").click(function() {
+            $("#temp01").load("/sacco/edit.html");
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');            
+        });
+    });
+</script>
+
+</body>
+
+</html>
