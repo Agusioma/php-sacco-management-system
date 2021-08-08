@@ -275,6 +275,8 @@
             $('.overlay').removeClass('active');
             $("#tranc").hide()
         }); 
+
+
         $("#home01").click(function() {
             var urlTo = new URL("https://sacco.terrence-aluda.com/sacco/dashboard.html");
                        urlTo.searchParams.append('fn', fn);
@@ -312,6 +314,7 @@
 
                 });                      
     });
+
       $(document).on('click', '#payBtn', function(event){
         event.preventDefault()
                 let phone = pn;
@@ -323,7 +326,13 @@
                       amount: amount
                     }, 
                   function(result){
-
+                    var urlBack = new URL("https://sacco.terrence-aluda.com/sacco/dashboard.html");
+                       urlBack.searchParams.append('fn', fn);
+                       urlBack.searchParams.append('sn', sn);
+                       urlBack.searchParams.append('em', em);
+                       urlBack.searchParams.append('pn', pn);
+                       urlBack.searchParams.append('dur', dur);
+                      window.location.replace(urlBack);
                 });
   });
       $(document).on('click', '#toEdit', function(event){

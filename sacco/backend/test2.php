@@ -1,4 +1,100 @@
 <?php
+
+require_once "connection.php";
+date_default_timezone_set('Africa/Nairobi');
+  $stkCallbackResponse = file_get_contents('php://input');
+  $arr = json_decode($stkCallbackResponse, true);
+
+  $determinant = 0;//$arr["Body"]["stkCallback"]["ResultCode"];
+  
+  if($determinant=='0'){
+        $msisd = 254702277060;//$arr["Body"]["stkCallback"]["CallbackMetadata"]["Item"][4]["Value"];
+
+        $today = date("F");
+        $month = strtolower($today);
+        $date = date("d-m-Y g:i a");
+        $currYear = date("Y");
+        $amountReceived = 230;//$arr["Body"]["stkCallback"]["CallbackMetadata"]["Item"][0]["Value"];
+        $transID = "GK6FTU985";//$arr["Body"]["stkCallback"]["CallbackMetadata"]["Item"][1]["Value"];
+
+        $sql = "SELECT * FROM customers WHERE PhoneNo='$msisd'";
+        if($result = $mysqli->query($sql)){
+            if($result->num_rows > 0){
+                $row = $result->fetch_array();
+                $customerID = $row['NatID'];
+                    $idSql = "SELECT * FROM savings WHERE customerID = '$customerID'";
+                    if($idResult = $mysqli->query($idSql)){
+                        if($idResult->num_rows > 0){
+                            $row = $idResult->fetch_array();
+                            $currentSavings = $row[$month];
+                            $amountToSave = $currentSavings + $amountReceived;
+                            $uQuery = "UPDATE savings SET $month='$amountToSave' WHERE customerID='$customerID'";
+                            $mysqli->query($uQuery); 
+
+                            $savingTransactionA = "INSERT INTO transactions (customerID, transID, transType, amount, transDate) VALUES (?, ?, ?, ?, ?)";
+                            $transStatement = $mysqli->prepare($savingTransactionA);
+                                // Bind variables to the prepared statement as parameters
+                                $transStatement->bind_param("sssss", $param1, $param2, $param3, $param4, $param5);
+                                $param1 = $customerID;
+                                $param2 = $transID;
+                                $param3 = "DEPOSIT";
+                                $param4 = $amountReceived;
+                                $param5 = $date;
+                                // Attempt to execute the prepared statementphone
+                                $transStatement->execute();
+                            // Close statement
+                            $transStatement->close();
+                        }else{
+                          $savingSql = "INSERT INTO savings (customerID, $month, currYear) VALUES (?, ?, ?)";
+                          $stmt = $mysqli->prepare($savingSql);
+                              // Bind variables to the prepared statement as parameters
+                              $stmt->bind_param("sss", $param1, $param2, $param3);
+                              $param1 = $customerID;
+                              $param2 = $amountReceived;
+                              $param3 = $currYear;
+                              // Attempt to execute the prepared statementphone
+                              $stmt->execute();
+                              $from = "contact@sacco.terrence-aluda.com";
+                              $to = $row['email'];
+                              $subject = "DEPOSIT TRANSACTION DETAILS";
+                              $message = "Hello ";//.$row['firstname']." ".$row['lastname'].",\n You have successfully deposited Ksh. ".$amountReceived." into your T-Bank Savings account. \nIf you did not initiate this transaction, please reply to this email as soon as possible.\n Regards,\nT-Bank Support.\n";
+                              $headers = $from;
+                              mail($to, $subject, $message, $headers);
+                          // Close statement
+                          $stmt->close();
+
+                          $savingTransaction = "INSERT INTO transactions (customerID, transID, transType, amount, transDate) VALUES (?, ?, ?, ?, ?)";
+                          $transStatement = $mysqli->prepare($savingTransaction);
+                              // Bind variables to the prepared statement as parameters
+                              $transStatement->bind_param("sssss", $param1, $param2, $param3, $param4, $param5);
+                              $param1 = $customerID;
+                              $param2 = $transID;
+                              $param3 = "DEPOSIT";
+                              $param4 = $amountReceived;
+                              $param5 = $date;
+                              // Attempt to execute the prepared statementphone
+                              $transStatement->execute();
+
+                          // Close statement
+                          $transStatement->close();
+                        }
+                      }
+            }
+          }else{
+            $logFile = "stkPushCallbackResponse.json";
+            $log = fopen($logFile, "a");
+            fwrite($log, $mysqli->error);
+            fclose($log);
+          }
+  
+    }else{
+  $logFile = "stkPushCallbackResponse.json";
+  $log = fopen($logFile, "a");
+  fwrite($log, "Error in transaction");
+  fclose($log);
+    }
+
+/*
                               $from = 'contact@sacco.terrence-aluda.com';
                               $ourDetails = 'AMOUNT: Ksh.100 \nTRANSACTION ID: xcxcxc \nTIME: ggggg \nCATEGORY: DEPOSIT\n';
                               $to      = 'terryterrence200@gmail.com';
@@ -8,10 +104,9 @@
 <html>
 <head>
 <title>HTML email</title>
-<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css' integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4' crossorigin='anonymous'>
 </head>
 <body>
-<p>This email contains HTML Tags!</p>
+<p>Hello ".$to.",</p>
 <div class='d-flex align-items-center justify-content-center vw-100 vh-100' style='padding-bottom: 3vh'>
 <div  class='card container' style='min-width: 90vw'>                
     <div class='card-body row'style='min-width: 90vw;'>

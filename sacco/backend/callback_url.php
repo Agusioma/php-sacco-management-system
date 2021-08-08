@@ -60,10 +60,9 @@ date_default_timezone_set('Africa/Nairobi');
 <html>
 <head>
 <title>HTML email</title>
-<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css' integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4' crossorigin='anonymous'>
 </head>
 <body>
-<p>This email contains HTML Tags!</p>
+<p>Hello ".$row['firstname'].",</p>
 <div class='d-flex align-items-center justify-content-center vw-100 vh-100' style='padding-bottom: 3vh'>
 <div  class='card container' style='min-width: 90vw'>                
     <div class='card-body row'style='min-width: 90vw;'>
@@ -97,7 +96,7 @@ date_default_timezone_set('Africa/Nairobi');
 </div>
 </body>
 </html>
-If you did not initiate this transaction, please reply to this email as soon as possible.\n Regards,\nJBCS Support.\n";
+If you did not initiate this transaction, please reply to this email as soon as possible.\n Regards,\nT-Bank Support.\n";
                               ///$headers = $from;
                               $headers = 'MIME-Version: 1.0' . "\r\n";
                               $headers .= 'Content-type:text/html;charset=UTF-8' . "\r\n";
@@ -142,3 +141,4 @@ If you did not initiate this transaction, please reply to this email as soon as 
   $log = fopen($logFile, "a");
   fwrite($log, $stkCallbackResponse);
   fclose($log);*/
+  ?>
