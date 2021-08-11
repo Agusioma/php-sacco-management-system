@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+        <!--<div class="d-flex align-items-center justify-content-center vw-100 vh-100" style="padding-bottom: 3vh">
+            <div  class="card container" style="min-width: 90vw">
+                              <div style="background-color: white; text-align: center; padding-top: 3.5vh" class="card-text text-danger">
+                                <h3>Your Details</h3>
+                            </div>                
+                <div class="card-body row"style="min-width: 90vw;">
+                <div class="col-md-12  d-flex align-items-center justify-content-center">                
+                            <div class="card-body" style=" max-width: 95vw;">  
+                            <div class="mb-3">
+                                  <div class="d-flex vw-50" style="text-align: left">
+                                    <h5 style="color: #008081">NAME:&nbsp;</h5><h5 id="myName" style=" white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                  <div class="d-flex vw-50" style="text-align: left">
+                                    <h5 style="color: #008081;">ID NUMBER:&nbsp;</h5><h5 id="myID" style=" white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                  <div class="d-flex vw-50" style="text-align: left">
+                                    <h5 style="color: #008081">PHONE NUMBER:&nbsp;</h5><h5 id="myNo" style=" white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                  <div class="d-flex vw-50" style="text-align: left">
+                                   <h5 style="color: #008081">EMAIL ADDRESS:&nbsp;</h5><h5 id="myEmail" style=" white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                                    <div class="d-flex vw-50" style="text-align: left">
+                                      <h5 style="color: #008081">REGISTRATION DATE:&nbsp;</h5><h5 id="myReg" style="white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                      </div>
+                            </div>  
+                            <div class="mb-3">
+                                    <div class="d-flex vw-50" style="text-align: left">
+                                      <h5 style="color: #008081; ">DURATION STAYED:&nbsp;</h5><h5  style="white-space: wrap; overflow: hidden; text-overflow: ellipsis;"></h5>
+                                      </div>
+                            </div>                             
+                            <div class="mb-3" style="text-align: center">              
+                              <button id="toEdit" class="btn" style="background-color: #008081; color: white"><i class="fa fa-pencil"></i> Edit Details</button>
+                          </div>                         
+                    </div>
+                </div>
+                </div>            
+                </div>
+            </div>    
+        </div> -->
+<div class="d-flex align-items-center justify-content-center vw-100 vh-100" style="padding-bottom: 3vh">
+      <div  class="card container" style="min-width: 90vw">
+            <div style="background-color: white; text-align: center; padding-top: 3.5vh" class="card-text text-danger">
+                  <h3>Your Details</h3>
+            </div>                
+            <div class="card-body row"style="min-width: 90vw;">
+
+				     <div class="col-md-3 card d-flex align-items-center justify-content-center" style="margin-left: 2vw"><br>          
+						  <img class="card-img-top" src="../sacco/assets/images/prof.jpg" alt="Card image cap">
+						  <div class="card-body">
+						    <h5 id="myName" class="card-title text-danger">TERRENCE ALUDA</h5>
+						    <p class="card-text text-primary">DURATION OF STAY</p>						    
+						    <h6 id="myDur" style="white-space: wrap; overflow: hidden; text-overflow: ellipsis;" class="card-text text-secondary">0 years 6 months and 29 days</h6>
+						  </div>                     
+				     </div>
+				     <div class="col-md-8 card" style="margin-left: 2vw"><br>
+						  <div class="card-body" style="margin-top: 10vh">
+						  	<div class="row">
+					     		<div class="col-md-6 d-flex"><br><h5 style="color: #008081;" class="card-title">IDENTIFICATION NUMBER:</h5></div>	
+					     		<div class="col-md-6 d-flex "><br><h5 style="color: #008081;" class="card-title">PHONE NUMBER:</h5></div>	
+				     		</div>
+						  	<div class="row">
+					     		<div class="col-md-6 d-flex"><br><h6 id="myID" class="card-title text-dark"></h6></div>	
+					     		<div class="col-md-6 d-flex "><br><h6 id="myNo" class="card-title text-dark"></h6></div>	
+				     		</div>	
+						  	<div class="row">
+					     		<div class="col-md-6 d-flex"><br><h5 style="color: #008081;" class="card-title">REGISTRATION DATE:</h5></div>	
+					     		<div class="col-md-6 d-flex "><br><h5 style="color: #008081;" class="card-title">EMAIL ADDRESS:</h5></div>	
+				     		</div>
+						  	<div class="row">
+					     		<div class="col-md-6 d-flex"><br><h6 id="myReg" class="card-title text-dark"></h6></div>	
+					     		<div class="col-md-6 d-flex "><br><h6 id="myEmail" class="card-title text-dark"></h6></div>	
+				     		</div><br>
+				     		<div class="mb-3" style="text-align: center">              
+                              <button id="toEdit" class="btn" style="background-color: #008081; color: white"><i class="fa fa-pencil"></i> Edit Details</button>
+                          </div>  					     							    
+						  </div>                     
+				     </div>				     
+			</div>
+      </div>            
+</div>
+    
+</body>
+</html>
