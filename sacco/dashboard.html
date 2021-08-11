@@ -11,7 +11,7 @@
     <style type="text/css">
     </style>
 
-<body style="background-color: rgba(0, 0, 0, 0.1);">
+<body style="background-color: rgba(0, 0, 0, 0.06);">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <!-- Scrollbar Custom CSS -->
@@ -229,7 +229,10 @@
   var em = urlParams.get('em')  
   var pn = urlParams.get('pn') 
   var dur = urlParams.get('dur')
-  
+  var cdur = urlParams.get('cdur')  
+  var rD = urlParams.get('rD') 
+  var ci = urlParams.get('ci')
+
 </script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -284,6 +287,10 @@
                        urlTo.searchParams.append('em', em);
                        urlTo.searchParams.append('pn', pn);
                        urlTo.searchParams.append('dur', dur);
+                       urlTo.searchParams.append('cdur', cdur);
+                       urlTo.searchParams.append('rD', rD);
+                       urlTo.searchParams.append('ci', ci);
+
                       window.location.replace(urlTo);
                   })
         $("#term01").click(function() {
