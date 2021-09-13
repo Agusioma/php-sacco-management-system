@@ -20,11 +20,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $amount = $row['amount'];
                 $transDate = $row['transDate'];    
                 ?>
-                 <tr>
-                    <td><?php echo $transID; ?></td>
-                    <td style="text-align: center"><?php echo $transType; ?></td>
-                    <td style="text-align: center"><?php echo $amount; ?></td>
-                    <td style="text-align: center;"><?php echo $transDate; ?></td>
+                 <tr style="background-color: #035050">
+                    <td class="text-white"><?php echo $transID; ?></td>
+                    <td class="text-white" style="text-align: center"><?php echo $transType; ?></td>
+                    <td style="text-align: center; color: #0af53a"><?php echo $amount; ?></td>
+                    <td class="text-white" style="text-align: center;"><?php echo $transDate; ?></td>
                  </tr>
                 
                 <?php 
@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 ?>
                 <div class="d-flex align-items-center justify-content-center vw-70 vh-70">
                 <br><br><br>
-                    <h5 class="text-dark">No transactions done yet</h5>
+                    <h5 class="text-white">No transactions done yet</h5>
                 </div>
                 <?php
             }
