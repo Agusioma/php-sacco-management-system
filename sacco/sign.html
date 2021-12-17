@@ -107,7 +107,9 @@
     $("#link1").click(function () {
       $("#sych").load("/sacco/signin.html");
     });
-    $("#regBtn").click(function () {
+  });
+
+  $(document).on('click', '#regBtn', function () {
       let fName = $("#fName").val();
       let sName = $("#sName").val();
       let em01 = $("#em01").val();
@@ -134,9 +136,9 @@
           $("#natID").val('');
           $("#pass").val('');
           $("#cpass").val('');
+          window.location.replace("https://sacco.terrence-aluda.com/sacco/sign.html");
         });
     });
-  });
 
   $(document).on('click', '#logBtn', function () {
     let logNum = $("#signNum").val();
