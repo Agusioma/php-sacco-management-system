@@ -54,13 +54,13 @@
               </div>
               <div class="mb-3">
                 <div class="d-flex align-items-center justify-content-center vw-30">
-                  <input class="form-control text-center" type="text" autofocus="true" placeholder="Phone number"
+                  <input class="form-control text-center" type="tel" autofocus="true" placeholder="Phone number"
                     id="signNum">
                 </div>
               </div>
               <div class="mb-3">
                 <div class="d-flex align-items-center justify-content-center vw-50">
-                  <input type='password' class="form-control text-center" placeholder="Confirm password" id="logPass">
+                  <input type='password' class="form-control text-center" placeholder="Enter password" id="logPass">
                 </div>
               </div>
               <div class="mb-3">
@@ -103,6 +103,10 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <script type="text/javascript">
+ function isNumber(param) {
+      var NumberRegex = /^\d+$/;
+      return NumberRegex.test(param);
+  }  
   $(document).ready(function () {
     $("#link1").click(function () {
       $("#sych").load("/sacco/signin.html");
@@ -143,6 +147,22 @@
   $(document).on('click', '#logBtn', function () {
     let logNum = $("#signNum").val();
     var passA1 = $("#logPass").val();
+    if(!logNum||!passA1||logNum.length<10||logNum.length>12||!isNumber(logNum)){
+
+      if(!logNum&&passA1){
+        $("#banner").html('Please enter your phone number');
+        $("#signNum").focus();
+      }else if((logNum&&logNum.length<10)||(logNum&&logNum.length>12)||!isNumber(logNum)){
+        $("#banner").html('Please a valid phone number');
+        $("#signNum").focus();
+      }else if(logNum&&!passA1){
+        $("#banner").html('Please enter your pasword');
+        $("#logPass").focus();
+      }else{
+        $("#banner").html('Please fill in all details');
+        $("#signNum").focus();
+      }
+    }else{
     $.post("https://sacco.terrence-aluda.com/sacco/backend/authenticate.php",
       {
         PhoneNo: logNum,
@@ -150,8 +170,8 @@
       },
       function (result) {
         if ((result) == "Access Denied") {
-          $("#signNum").val('');
-          $("#logPass").val('');
+          //$("#signNum").val('');
+          //$("#logPass").val('');
           $("#banner").html('Wrong login credentials');
         } else {
           let obj = JSON.parse(result)
@@ -175,6 +195,7 @@
           window.location.replace(url);
         }
       });
+    }
   });
 
 </script>
