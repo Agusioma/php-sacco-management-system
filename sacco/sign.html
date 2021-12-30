@@ -107,6 +107,11 @@
       var NumberRegex = /^\d+$/;
       return NumberRegex.test(param);
   }  
+
+ function isEmail(email) {
+      var EmailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      return EmailRegex.test(email);
+ }  
   $(document).ready(function () {
     $("#link1").click(function () {
       $("#sych").load("/sacco/signin.html");
@@ -122,26 +127,45 @@
       let pass = $("#pass").val();
       let cpass = $("#cpass").val();
 
-      $.post("https://sacco.terrence-aluda.com/sacco/backend/customeregistration.php",
-        {
-          firstname: fName,
-          lastname: sName,
-          email: em01,
-          PhoneNo: tel01,
-          password: pass,
-          NatID: natID
-        },
-        function (result) {
-          $("#banner2").html(result);
-          $("#fName").val('');
-          $("#sName").val('');
-          $("#em01").val('');
-          $("#tel01").val('');
-          $("#natID").val('');
-          $("#pass").val('');
-          $("#cpass").val('');
-          window.location.replace("https://sacco.terrence-aluda.com/sacco/sign.html");
-        });
+      if((!fName||!sName||!em01||!tel01||!natID||!pass||!cpass)||(!(pass===cpass))||!isNumber(tel01)||!isNumber(natID)||!isEmail(em01)||tel01.length<10||tel01.length>12){
+          if(!fName||!sName||!em01||!tel01||!natID||!pass||!cpass){
+            $("#banner2").html("Please fill in all the details");
+          }else if(em01&&!isEmail(em01)){
+            $("#banner2").html("Enter a valid email address");
+            $("#em01").focus();
+          }else if(natID&&!isNumber(natID)){
+            $("#banner2").html("Enter a valid ID number");
+            $("#natID").focus();
+          }else if(tel01&&(!isNumber(tel01)||tel01.length<10||tel01.length>12)){
+            $("#banner2").html("Enter a valid phone number");
+            $("#tel01").focus();
+          }else if(!(pass===cpass)){
+            $("#banner2").html("Your passwords dont match");
+            $("#pass").focus();
+          }
+
+      }else{
+          $.post("https://sacco.terrence-aluda.com/sacco/backend/customeregistration.php",
+            {
+              firstname: fName,
+              lastname: sName,
+              email: em01,
+              PhoneNo: tel01,
+              password: pass,
+              NatID: natID
+            },
+            function (result) {
+              $("#banner2").html(result);
+              $("#fName").val('');
+              $("#sName").val('');
+              $("#em01").val('');
+              $("#tel01").val('');
+              $("#natID").val('');
+              $("#pass").val('');
+              $("#cpass").val('');
+              window.location.replace("https://sacco.terrence-aluda.com/sacco/sign.html");
+            });
+      }
     });
 
   $(document).on('click', '#logBtn', function () {
