@@ -130,18 +130,23 @@
       if((!fName||!sName||!em01||!tel01||!natID||!pass||!cpass)||(!(pass===cpass))||!isNumber(tel01)||!isNumber(natID)||!isEmail(em01)||tel01.length<10||tel01.length>12){
           if(!fName||!sName||!em01||!tel01||!natID||!pass||!cpass){
             $("#banner2").html("Please fill in all the details");
+            hideRegBanner();
           }else if(em01&&!isEmail(em01)){
             $("#banner2").html("Enter a valid email address");
             $("#em01").focus();
+            hideRegBanner();
           }else if(natID&&!isNumber(natID)){
             $("#banner2").html("Enter a valid ID number");
             $("#natID").focus();
+            hideRegBanner();
           }else if(tel01&&(!isNumber(tel01)||tel01.length<10||tel01.length>12)){
             $("#banner2").html("Enter a valid phone number");
             $("#tel01").focus();
+            hideRegBanner();
           }else if(!(pass===cpass)){
             $("#banner2").html("Your passwords dont match");
             $("#pass").focus();
+            hideRegBanner();
           }
 
       }else{
@@ -176,15 +181,19 @@
       if(!logNum&&passA1){
         $("#banner").html('Please enter your phone number');
         $("#signNum").focus();
+        hideLoginBanner();
       }else if((logNum&&logNum.length<10)||(logNum&&logNum.length>12)||!isNumber(logNum)){
         $("#banner").html('Please a valid phone number');
         $("#signNum").focus();
+        hideLoginBanner();
       }else if(logNum&&!passA1){
         $("#banner").html('Please enter your pasword');
         $("#logPass").focus();
+        hideLoginBanner();
       }else{
         $("#banner").html('Please fill in all details');
         $("#signNum").focus();
+        hideLoginBanner();
       }
     }else{
     $.post("https://sacco.terrence-aluda.com/sacco/backend/authenticate.php",
@@ -221,7 +230,16 @@
       });
     }
   });
-
+  function hideRegBanner(){
+        setTimeout(function () {
+           $("#banner2").hide();
+        }, 2000);
+  }
+  function hideLoginBanner(){
+        setTimeout(function () {
+           $("#banner").hide();
+        }, 2000);
+  }  
 </script>
 
 </html>
