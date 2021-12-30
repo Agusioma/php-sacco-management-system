@@ -88,21 +88,21 @@
       </div>
 
     </div>
-        <div class="myPopup">
+<div id="pop01" class="myPopup" >
                     <div class="card text-center" style="width: auto">
                       <div class="card-header">
-                        Success
+                        <h4 class="text-danger">Success</h4>
                       </div>
                       <div class="card-body">
-                        <h5 class="card-title">Welcome</h5>
-                        <p class="card-text">You have successfully completed the registration.</p>
-                        <a href="sign.html" class="btn btn-danger">Proceed</a>
+                        <h5 class="card-title text-success">Welcome</h5>
+                        <p class="card-text text-dark">You have successfully completed the registration.</p>
+                        <a id="afterReg" class="btn text-white btn-danger">Proceed</a>
                       </div>
                       <div class="card-footer text-muted">
                         T-Bank
                       </div>
                     </div>
-                </div>
+          </div>
   </div>
 </body>
 
@@ -132,6 +132,9 @@
   $(document).ready(function () {
     $("#link1").click(function () {
       $("#sych").load("/sacco/signin.html");
+    });
+     $("#afterReg").click(function () {
+      window.location.replace("https://sacco.terrence-aluda.com/sacco/sign.html");
     });
   });
 
@@ -185,7 +188,7 @@
               $("#natID").val('');
               $("#pass").val('');
               $("#cpass").val('');
-              window.location.replace("https://sacco.terrence-aluda.com/sacco/sign.html");
+              $("#pop01").show();
             });
       }
     });
@@ -247,6 +250,7 @@
       });
     }
   });
+
   function hideRegBanner(){
        setTimeout(function () {
            $("#banner").html('');
@@ -257,6 +261,7 @@
            $("#banner2").html('');
         }, 2000);
   }  
+
 </script>
 
 </html>
