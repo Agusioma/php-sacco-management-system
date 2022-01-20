@@ -82,7 +82,7 @@
 
             <ul class="list-unstyled CTAs">
                 <p>
-                    &copy;2021 all rights reserved. Developed and maintained by <a href="https://www.terrence-aluda.com/">Terrence Aluda</a>
+                    &copy;2022 all rights reserved. Developed and maintained by <a href="https://www.terrence-aluda.com/">Terrence Aluda</a>
                 </p>
             </ul>
         </nav>
@@ -197,7 +197,7 @@
                                         <table class="table table-borderless">
 
                                             <tbody id="trans01" >
-                                                
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -228,11 +228,11 @@
   var urlParams = new URLSearchParams(queryString);
   var fn = urlParams.get('fn')
   var sn = urlParams.get('sn')
-  var em = urlParams.get('em')  
-  var pn = urlParams.get('pn') 
+  var em = urlParams.get('em')
+  var pn = urlParams.get('pn')
   var dur = urlParams.get('dur')
-  var cdur = urlParams.get('cdur')  
-  var rD = urlParams.get('rD') 
+  var cdur = urlParams.get('cdur')
+  var rD = urlParams.get('rD')
   var ci = urlParams.get('ci')
 
 </script>
@@ -265,21 +265,21 @@
         $("#edit01").click(function() {
             $("#temp01").load("/sacco/edit.html");
             $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active'); 
-            $("#tranc").hide()           
+            $('.overlay').removeClass('active');
+            $("#tranc").hide()
         });
         $("#prof01").click(function() {
             $("#temp01").load("/sacco/profile.html");
             $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active'); 
-            $("#tranc").hide()           
-        });  
+            $('.overlay').removeClass('active');
+            $("#tranc").hide()
+        });
         $("#contact01").click(function() {
             $("#temp01").load("/sacco/contact.html");
             $('#sidebar').removeClass('active');
             $('.overlay').removeClass('active');
             $("#tranc").hide()
-        }); 
+        });
 
 
         $("#home01").click(function() {
@@ -297,21 +297,21 @@
                   })
         $("#term01").click(function() {
             window.location.replace("https://sacco.terrence-aluda.com/sacco/sign.html");
-        });        
+        });
                 $.post("https://sacco.terrence-aluda.com/sacco/backend/trans.php",
                     {
                       pn: pn
-                    }, 
+                    },
                   function(result){
 
                       $("#trans01").html(result)
 
-                }); 
+                });
                 $.post("https://sacco.terrence-aluda.com/sacco/backend/savings.php",
                     {
                       phone: pn,
                       email: em
-                    }, 
+                    },
                   function(result){
                     //let sav = result
                       if(dur >= 6){
@@ -321,7 +321,7 @@
                       }
                       $("#sav01").html(result+".00")
 
-                });                      
+                });
     });
 
       $(document).on('click', '#payBtn', function(event){
@@ -333,7 +333,7 @@
                     {
                       number: phone,
                       amount: amount
-                    }, 
+                    },
                   function(result){
                     var urlBack = new URL("https://sacco.terrence-aluda.com/sacco/dashboard.html");
                        urlBack.searchParams.append('fn', fn);
@@ -347,7 +347,7 @@
       $(document).on('click', '#toEdit', function(event){
             $("#temp01").load("/sacco/edit.html");
             $("#tranc").hide()
-  });      
+  });
         $(document).on('click', '#editBtn', function(event){
 
             $.post("https://sacco.terrence-aluda.com/sacco/backend/update.php",
@@ -378,7 +378,7 @@
           var name = fn + " " + sn;
           var email = em;
           var subject = $("#sub01").val();
-          var message = $("#message01").val();  
+          var message = $("#message01").val();
 
           if(!subject||!message){
                     $("#banner3").text("Failed. Please fill in all the fields.")
@@ -387,21 +387,21 @@
                     }else{
                       $("#message01").focus();
                     }
-          }else{  
+          }else{
               $.post("https://sacco.terrence-aluda.com/sacco/backend/mail.php",
                   {
                     nameEm: name,
                     emailTS: email,
                     subEm: subject,
                     messEm: message
-                  }, 
+                  },
                 function(result){
                   $("#banner3").text("Your message was sent successfully")
                   $("#sub01").val('');
                   $("#message01").val('');
               });
             }
-            });        
+            });
 </script>
 
 </body>
