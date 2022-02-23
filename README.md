@@ -1,2 +1,2 @@
 # php-sacco-management-system
-A Sacco system based in PhP and Jquery AJAX
+A Sacco system based on PHP and Jquery AJAX
